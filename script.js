@@ -12,7 +12,7 @@ let tabuleiro = [
   [0, 0, 0, 0, 0, 0],
   [0, 0, 0, 0, 0, 0],
 ];
-
+//teste do Davis
 function exibeTabuleiro() {
   for (let i = 0; i < tabuleiro.length; i++) {
     let coluna = document.createElement("div");
