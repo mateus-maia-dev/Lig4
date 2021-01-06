@@ -274,7 +274,7 @@ function checaVitoria() {
           cell === tabuleiro[y + 2][x] &&
           cell === tabuleiro[y + 3][x]
         ) {
-          alert(`${cell}` + " venceu na HORIZONTAL!");
+          alert(`${cell}` + " VENCEU na HORIZONTAL!");
           return 0;
         }
       }
