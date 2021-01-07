@@ -320,7 +320,7 @@ function checaVitoria() {
         ) {
           let vitoria = document.createElement('div');
           vitoria.id = "vitoria"
-          vitoria.innerHTML = `${cell} Venceu na Ascendete`;
+          vitoria.innerHTML = `${cell} Venceu na diagonal`;
           body.appendChild(vitoria)
           //alert(`${cell}` + " venceu na ASCENDENTE!");
           //return 0;
@@ -342,7 +342,7 @@ function checaVitoria() {
         ) {
           let vitoria = document.createElement('div');
           vitoria.id = "vitoria"
-          vitoria.innerHTML = `${cell} Venceu na Descendente`;
+          vitoria.innerHTML = `${cell} Venceu na diagonal`;
           body.appendChild(vitoria)
           //alert(`${cell}` + " venceu na ASCENDENTE!");
 
