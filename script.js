@@ -1,3 +1,4 @@
+let body = document.getElementById("body")
 const gameContent = document.getElementById("gameContent");
 // const gameContent1 = document.getElementById("gameContent1");
 let disco = document.createElement("div");
@@ -13,6 +14,9 @@ let tabuleiro = [
   [0, 0, 0, 0, 0, 0],
 ];
 //teste do Davis
+
+
+
 function exibeTabuleiro() {
   for (let i = 0; i < tabuleiro.length; i++) {
     let coluna = document.createElement("div");
@@ -82,6 +86,11 @@ function isEven(numero) {
 // gameContent.addEventListener("click", onClick);
 
 //funcção de clique na primeira coluna
+
+function colocarEventos(){
+
+
+
 document.getElementById("coluna0").onclick = function click() {
   console.log("clicou na 1");
   console.log(contador1);
@@ -243,8 +252,13 @@ document.getElementById("coluna6").onclick = function click() {
 
   checaVitoria();
 };
+
+}
+
+
 let LimX = tabuleiro[0].length - 3;
 let LimY = tabuleiro.length - 3;
+
 function checaVitoria() {
   for (let y = 0; y < tabuleiro.length; y++) {
     for (let x = 0; x < LimX; x++) {
@@ -256,7 +270,11 @@ function checaVitoria() {
           cell === tabuleiro[y][x + 2] &&
           cell === tabuleiro[y][x + 3]
         ) {
-          alert(`${cell}` + " venceu na VERTICAL!");
+          let vitoria = document.createElement('div');
+          vitoria.id = "vitoria"
+          vitoria.innerHTML = `${cell} Venceu na Vertical`;
+          body.appendChild(vitoria)
+          //alert(`${cell}` + " venceu na VERTICAL!");
           return 0;
         }
       }
@@ -274,7 +292,11 @@ function checaVitoria() {
           cell === tabuleiro[y + 2][x] &&
           cell === tabuleiro[y + 3][x]
         ) {
-          alert(`${cell}` + " VENCEU na HORIZONTAL!");
+          let vitoria = document.createElement('div');
+          vitoria.id = "vitoria"
+          vitoria.innerHTML = `${cell} Venceu na Horizontal`;
+          body.appendChild(vitoria)
+          //alert(`${cell}` + " VENCEU na HORIZONTAL!");
           return 0;
         }
       }
@@ -292,6 +314,10 @@ function checaVitoria() {
           cell === tabuleiro[y + 2][x + 2] &&
           cell === tabuleiro[y + 3][x + 3]
         ) {
+          let vitoria = document.createElement('div');
+          vitoria.id = "vitoria"
+          vitoria.innerHTML = `${cell} Venceu na Ascendete`;
+          body.appendChild(vitoria)
           alert(`${cell}` + " venceu na ASCENDENTE!");
           return 0;
         }
@@ -310,7 +336,13 @@ function checaVitoria() {
           cell === tabuleiro[y + 2][x - 2] &&
           cell === tabuleiro[y + 3][x - 3]
         ) {
-          alert(`${cell}` + " venceu na ASCENDENTE!");
+          let vitoria = document.createElement('div');
+          vitoria.id = "vitoria"
+          vitoria.innerHTML = `${cell} Venceu na Ascendete`;
+          let newELement = document.getElementById("vitoria");
+          body.appendChild(newELement)
+          //alert(`${cell}` + " venceu na ASCENDENTE!");
+
           return 0;
         }
       }
@@ -318,4 +350,35 @@ function checaVitoria() {
   }
 }
 
-//Teste grupo
+colocarEventos()
+
+function resetar() {
+  let gameContent = document.getElementById("gameContent");
+  gameContent.innerHTML = " ";
+
+  tabuleiro = [
+    [0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0],
+  ];
+
+  contador1 = 0;
+  contador2 = 10;
+  contador3 = 20;
+  contador4 = 30;
+  contador5 = 40;
+  contador6 = 50;
+  contador7 = 60;
+  contadorGeral = 0;
+  exibeTabuleiro()
+  colocarEventos()
+  let vitoria = document.getElementById("vitoria");
+  vitoria.remove()
+}
+
+let reset = document.getElementById("restart");
+reset.addEventListener("click", resetar)

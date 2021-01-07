@@ -1,5 +1,47 @@
-.gameContent {
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+#body {
+  background-image: url(/img/Mario.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-color: black;
+  max-width: 375px;
+  width: auto;
+  height: auto;
+
+}
+
+h1, h3, p, #vitoria {
+  background-color: rgba(196, 184, 184, 0.507);
   display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  font-family: 'Righteous', cursive;
+  color: rgb(0, 0, 0);
+  
+}
+
+h1 {
+  font-size: 2em;
+  padding: 10px 0;
+}
+
+h3 {
+  font-size: 1.4em;
+  padding-bottom: 5px;
+
+}
+
+p{
+  padding: 5px 15px 20px 15px;
+}
+
+.gameContent {
+  background-color: rgba(255, 255, 255, 0.548);
+  width: 100%;
+  display: flex;
+  justify-content: center;
   flex-direction: row;
 }
 .disco {
@@ -17,3 +59,26 @@
   display: flex;
   flex-direction: column-reverse;
 }
+
+#vitoria {
+
+}
+
+#restart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 35px;
+  margin-bottom: 25px;
+  width: 150px;
+  height: 40px;
+  background-color: rgb(187, 134, 64);
+  border: 3px solid rgb(89, 88, 65);
+  border-radius: 4px;
+  color: #ffffff;
+  font-family: 'Righteous', cursive;
+  font-size: 1.4em
+
+}
+
