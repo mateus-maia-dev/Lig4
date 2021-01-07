@@ -1,3 +1,4 @@
+let body = document.getElementById("body")
 const gameContent = document.getElementById("gameContent");
 // const gameContent1 = document.getElementById("gameContent1");
 let disco = document.createElement("div");
@@ -13,7 +14,14 @@ let tabuleiro = [
   [0, 0, 0, 0, 0, 0],
 ];
 //teste do Davis
+
+//let luigi = 
+
+
+
+
 function exibeTabuleiro() {
+  console.log(tabuleiro)
   for (let i = 0; i < tabuleiro.length; i++) {
     let coluna = document.createElement("div");
     coluna.classList.add("coluna");
@@ -82,169 +90,179 @@ function isEven(numero) {
 // gameContent.addEventListener("click", onClick);
 
 //funcção de clique na primeira coluna
-document.getElementById("coluna0").onclick = function click() {
-  console.log("clicou na 1");
-  console.log(contador1);
-  let celula = document.getElementById(contador1);
 
-  console.log(celula);
-  let disco = document.createElement("div");
-  let corDoDisco = "red";
-  disco.classList.add("disco");
-  celula.appendChild(disco);
+function colocarClicks() {
 
-  contadorGeral++;
 
-  if (isEven(contadorGeral)) {
-    disco.style.backgroundColor = "red";
-    corDoDisco = "black";
-  } else {
-    disco.style.backgroundColor = "black";
-    corDoDisco = "red";
-  }
-  tabuleiro[0][contador1] = disco.style.backgroundColor;
 
-  contador1++;
+  const coluna0 = document.getElementById("coluna0").onclick = function click() {
+    console.log("clicou na 1");
+    console.log(contador1);
+    let celula = document.getElementById(contador1);
 
-  checaVitoria();
-};
-//funcção de clique na segunda coluna
-document.getElementById("coluna1").onclick = function click() {
-  console.log("clicou na 2");
-  let celula = document.getElementById(contador2);
-  let disco = document.createElement("div");
-  disco.classList.add("disco");
-  celula.appendChild(disco);
+    console.log(celula);
+    let disco = document.createElement("div");
+    let corDoDisco = "red";
+    disco.classList.add("disco");
+    celula.appendChild(disco);
 
-  contadorGeral++;
-  console.log(Math.floor(contador2 % 10));
+    contadorGeral++;
 
-  if (isEven(contadorGeral)) {
-    disco.style.backgroundColor = "red";
-    corDoDisco = "black";
-  } else {
-    disco.style.backgroundColor = "black";
-    corDoDisco = "red";
-  }
-  tabuleiro[1][Math.floor(contador2 % 10)] = disco.style.backgroundColor;
+    if (isEven(contadorGeral)) {
+      disco.style.backgroundColor = "red";
+      corDoDisco = "black";
+    } else {
+      disco.style.backgroundColor = "black";
+      corDoDisco = "red";
+    }
+    tabuleiro[0][contador1] = disco.style.backgroundColor;
 
-  contador2++;
+    contador1++;
 
-  checaVitoria();
-};
-//funcção de clique na terceira coluna
-document.getElementById("coluna2").onclick = function click() {
-  console.log("clicou na 3");
-  let celula = document.getElementById(contador3);
-  let disco = document.createElement("div");
-  disco.classList.add("disco");
-  celula.appendChild(disco);
+    checaVitoria();
+  };
+  //funcção de clique na segunda coluna
+  const coluna1 = document.getElementById("coluna1").onclick = function click() {
+    console.log("clicou na 2");
+    let celula = document.getElementById(contador2);
+    let disco = document.createElement("div");
+    disco.classList.add("disco");
+    celula.appendChild(disco);
 
-  contadorGeral++;
-  console.log(Math.floor(contador3 / 10));
+    contadorGeral++;
+    console.log(Math.floor(contador2 % 10));
 
-  if (isEven(contadorGeral)) {
-    disco.style.backgroundColor = "red";
-    corDoDisco = "black";
-  } else {
-    disco.style.backgroundColor = "black";
-    corDoDisco = "red";
-  }
-  tabuleiro[2][Math.floor(contador3 % 10)] = disco.style.backgroundColor;
-  contador3++;
+    if (isEven(contadorGeral)) {
+      disco.style.backgroundColor = "red";
+      corDoDisco = "black";
+    } else {
+      disco.style.backgroundColor = "black";
+      corDoDisco = "red";
+    }
+    tabuleiro[1][Math.floor(contador2 % 10)] = disco.style.backgroundColor;
 
-  checaVitoria();
-};
-//funcção de clique na quarta coluna
-document.getElementById("coluna3").onclick = function click() {
-  console.log("clicou na 4");
-  let celula = document.getElementById(contador4);
-  let disco = document.createElement("div");
-  disco.classList.add("disco");
-  celula.appendChild(disco);
+    contador2++;
 
-  contadorGeral++;
+    checaVitoria();
+  };
+  //funcção de clique na terceira coluna
+  const coluna2 = document.getElementById("coluna2").onclick = function click() {
+    console.log("clicou na 3");
+    let celula = document.getElementById(contador3);
+    let disco = document.createElement("div");
+    disco.classList.add("disco");
+    celula.appendChild(disco);
 
-  if (isEven(contadorGeral)) {
-    disco.style.backgroundColor = "red";
-    corDoDisco = "black";
-  } else {
-    disco.style.backgroundColor = "black";
-    corDoDisco = "red";
-  }
-  tabuleiro[3][Math.floor(contador4 % 10)] = disco.style.backgroundColor;
-  contador4++;
+    contadorGeral++;
+    console.log(Math.floor(contador3 / 10));
 
-  checaVitoria();
-};
-//funcção de clique na quinta coluna
-document.getElementById("coluna4").onclick = function click() {
-  console.log("clicou na 5");
-  let celula = document.getElementById(contador5);
-  let disco = document.createElement("div");
-  disco.classList.add("disco");
-  celula.appendChild(disco);
+    if (isEven(contadorGeral)) {
+      disco.style.backgroundColor = "red";
+      corDoDisco = "black";
+    } else {
+      disco.style.backgroundColor = "black";
+      corDoDisco = "red";
+    }
+    tabuleiro[2][Math.floor(contador3 % 10)] = disco.style.backgroundColor;
+    contador3++;
 
-  contadorGeral++;
+    checaVitoria();
+  };
+  //funcção de clique na quarta coluna
+  const coluna3 = document.getElementById("coluna3").onclick = function click() {
+    console.log("clicou na 4");
+    let celula = document.getElementById(contador4);
+    let disco = document.createElement("div");
+    disco.classList.add("disco");
+    celula.appendChild(disco);
 
-  if (isEven(contadorGeral)) {
-    disco.style.backgroundColor = "red";
-    corDoDisco = "black";
-  } else {
-    disco.style.backgroundColor = "black";
-    corDoDisco = "red";
-  }
-  tabuleiro[4][Math.floor(contador5 % 10)] = disco.style.backgroundColor;
-  contador5++;
+    contadorGeral++;
 
-  checaVitoria();
-};
-//funcção de clique na sexta coluna
-document.getElementById("coluna5").onclick = function click() {
-  console.log("clicou na 6");
-  let celula = document.getElementById(contador6);
-  let disco = document.createElement("div");
-  disco.classList.add("disco");
-  celula.appendChild(disco);
+    if (isEven(contadorGeral)) {
+      disco.style.backgroundColor = "red";
+      corDoDisco = "black";
+    } else {
+      disco.style.backgroundColor = "black";
+      corDoDisco = "red";
+    }
+    tabuleiro[3][Math.floor(contador4 % 10)] = disco.style.backgroundColor;
+    contador4++;
 
-  contadorGeral++;
+    checaVitoria();
+  };
+  //funcção de clique na quinta coluna
+  const coluna4 = document.getElementById("coluna4").onclick = function click() {
+    console.log("clicou na 5");
+    let celula = document.getElementById(contador5);
+    let disco = document.createElement("div");
+    disco.classList.add("disco");
+    celula.appendChild(disco);
 
-  if (isEven(contadorGeral)) {
-    disco.style.backgroundColor = "red";
-    corDoDisco = "black";
-  } else {
-    disco.style.backgroundColor = "black";
-    corDoDisco = "red";
-  }
-  tabuleiro[5][Math.floor(contador6 % 10)] = disco.style.backgroundColor;
-  contador6++;
+    contadorGeral++;
 
-  checaVitoria();
-};
-//funcção de clique na setima coluna
-document.getElementById("coluna6").onclick = function click() {
-  console.log("clicou na 7");
-  let celula = document.getElementById(contador7);
-  let disco = document.createElement("div");
-  disco.classList.add("disco");
-  celula.appendChild(disco);
+    if (isEven(contadorGeral)) {
+      disco.style.backgroundColor = "red";
+      corDoDisco = "black";
+    } else {
+      disco.style.backgroundColor = "black";
+      corDoDisco = "red";
+    }
+    tabuleiro[4][Math.floor(contador5 % 10)] = disco.style.backgroundColor;
+    contador5++;
 
-  contadorGeral++;
+    checaVitoria();
+  };
+  //funcção de clique na sexta coluna
+  const coluna5 = document.getElementById("coluna5").onclick = function click() {
+    console.log("clicou na 6");
+    let celula = document.getElementById(contador6);
+    let disco = document.createElement("div");
+    disco.classList.add("disco");
+    celula.appendChild(disco);
 
-  if (isEven(contadorGeral)) {
-    disco.style.backgroundColor = "red";
-    corDoDisco = "black";
-  } else {
-    disco.style.backgroundColor = "black";
-    corDoDisco = "red";
-  }
-  tabuleiro[6][Math.floor(contador7 % 10)] = disco.style.backgroundColor;
-  contador7++;
+    contadorGeral++;
 
-  checaVitoria();
-};
+    if (isEven(contadorGeral)) {
+      disco.style.backgroundColor = "red";
+      corDoDisco = "black";
+    } else {
+      disco.style.backgroundColor = "black";
+      corDoDisco = "red";
+    }
+    tabuleiro[5][Math.floor(contador6 % 10)] = disco.style.backgroundColor;
+    contador6++;
+
+    checaVitoria();
+  };
+  //funcção de clique na setima coluna
+  const coluna6 = document.getElementById("coluna6").onclick = function click() {
+    console.log("clicou na 7");
+    let celula = document.getElementById(contador7);
+    let disco = document.createElement("div");
+    disco.classList.add("disco");
+    celula.appendChild(disco);
+
+    contadorGeral++;
+
+    if (isEven(contadorGeral)) {
+      disco.style.backgroundColor = "red";
+      corDoDisco = "black";
+    } else {
+      disco.style.backgroundColor = "black";
+      corDoDisco = "red";
+    }
+    tabuleiro[6][Math.floor(contador7 % 10)] = disco.style.backgroundColor;
+    contador7++;
+
+    checaVitoria();
+  };
+
+}
+
+
 let LimX = tabuleiro[0].length - 3;
 let LimY = tabuleiro.length - 3;
+
 function checaVitoria() {
   for (let y = 0; y < tabuleiro.length; y++) {
     for (let x = 0; x < LimX; x++) {
@@ -256,8 +274,12 @@ function checaVitoria() {
           cell === tabuleiro[y][x + 2] &&
           cell === tabuleiro[y][x + 3]
         ) {
-          alert(`${cell}` + " venceu na VERTICAL!");
-          return 0;
+          let vitoria = document.createElement('div');
+          vitoria.id = "vitoria"
+          vitoria.innerHTML = `${cell} Venceu na Vertical`;
+          body.appendChild(vitoria)
+          //alert(`${cell}` + " venceu na VERTICAL!");
+          //return 0;
         }
       }
     }
@@ -274,8 +296,12 @@ function checaVitoria() {
           cell === tabuleiro[y + 2][x] &&
           cell === tabuleiro[y + 3][x]
         ) {
-          alert(`${cell}` + " VENCEU na HORIZONTAL!");
-          return 0;
+          let vitoria = document.createElement('div');
+          vitoria.id = "vitoria"
+          vitoria.innerHTML = `${cell} Venceu na Horizontal`;
+          body.appendChild(vitoria)
+          //alert(`${cell}` + " VENCEU na HORIZONTAL!");
+          //return 0;
         }
       }
     }
@@ -292,8 +318,12 @@ function checaVitoria() {
           cell === tabuleiro[y + 2][x + 2] &&
           cell === tabuleiro[y + 3][x + 3]
         ) {
-          alert(`${cell}` + " venceu na ASCENDENTE!");
-          return 0;
+          let vitoria = document.createElement('div');
+          vitoria.id = "vitoria"
+          vitoria.innerHTML = `${cell} Venceu na Ascendete`;
+          body.appendChild(vitoria)
+          //alert(`${cell}` + " venceu na ASCENDENTE!");
+          //return 0;
         }
       }
     }
@@ -310,12 +340,62 @@ function checaVitoria() {
           cell === tabuleiro[y + 2][x - 2] &&
           cell === tabuleiro[y + 3][x - 3]
         ) {
-          alert(`${cell}` + " venceu na ASCENDENTE!");
-          return 0;
+          let vitoria = document.createElement('div');
+          vitoria.id = "vitoria"
+          vitoria.innerHTML = `${cell} Venceu na Ascendete`;
+          let newELement = document.getElementById("vitoria");
+          body.appendChild(newELement)
+          //alert(`${cell}` + " venceu na ASCENDENTE!");
+
+          //return 0;
         }
       }
     }
   }
 }
 
-//Teste grupo
+colocarClicks()
+
+// Função de resetar o jogo
+
+
+function resetar() {
+  let gameContent = document.getElementById("gameContent");
+  gameContent.innerHTML = " ";
+
+  tabuleiro = [
+    [0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0],
+  ];
+
+  contador1 = 0;
+  contador2 = 10;
+  contador3 = 20;
+  contador4 = 30;
+  contador5 = 40;
+  contador6 = 50;
+  contador7 = 60;
+  contadorGeral = 0;
+  exibeTabuleiro()
+  colocarClicks()
+  let vitoria = document.getElementById("vitoria");
+  vitoria.remove()
+}
+
+let reset = document.getElementById("restart");
+reset.addEventListener("click", resetar)
+
+
+//coluna0.addEventListener("click", handlerClick)
+
+
+//function handlerClick() {
+//
+//  let coluna0 = document.getElementById("coluna"+´);
+//
+//}
