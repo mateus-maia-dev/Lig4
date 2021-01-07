@@ -88,6 +88,8 @@ function isEven(numero) {
 
 //funcção de clique na primeira coluna
 
+colocarClicks();
+
 function colocarClicks() {
   const coluna0 = (document.getElementById(
     "coluna0"
@@ -284,8 +286,8 @@ function checaVitoria() {
           vitoria.id = "vitoria";
           vitoria.innerHTML = `${cell} Venceu na VERTICAL`;
           body.appendChild(vitoria);
-          //alert(`${cell}` + " venceu na VERTICAL!");
-          //return 0;
+
+          waitReset();
         }
       }
     }
@@ -306,8 +308,8 @@ function checaVitoria() {
           vitoria.id = "vitoria";
           vitoria.innerHTML = `${cell} Venceu na HORIZONTAL`;
           body.appendChild(vitoria);
-          //alert(`${cell}` + " VENCEU na HORIZONTAL!");
-          //return 0;
+
+          waitReset();
         }
       }
     }
@@ -328,8 +330,8 @@ function checaVitoria() {
           vitoria.id = "vitoria";
           vitoria.innerHTML = `${cell} Venceu na DIAGONAL`;
           body.appendChild(vitoria);
-          //alert(`${cell}` + " venceu na ASCENDENTE!");
-          //return 0;
+
+          waitReset();
         }
       }
     }
@@ -351,16 +353,13 @@ function checaVitoria() {
           vitoria.innerHTML = `${cell} Venceu na DIAGONAL`;
 
           body.appendChild(vitoria);
-          //alert(`${cell}` + " venceu na ASCENDENTE!");
 
-          //return 0;
+          waitReset();
         }
       }
     }
   }
 }
-
-colocarClicks();
 
 // Função de resetar o jogo
 
@@ -389,7 +388,16 @@ function resetar() {
   exibeTabuleiro();
   colocarClicks();
   let vitoria = document.getElementById("vitoria");
+
   vitoria.remove();
+
+  return 1;
+}
+
+function waitReset() {
+  for (let i = 0; i < tabuleiro.length; i++) {
+    document.getElementById("coluna" + `${i}`).onclick = 0;
+  }
 }
 
 let reset = document.getElementById("restart");
