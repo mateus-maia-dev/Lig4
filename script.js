@@ -1,4 +1,4 @@
-let body = document.getElementById("body")
+let body = document.getElementById("body");
 const gameContent = document.getElementById("gameContent");
 // const gameContent1 = document.getElementById("gameContent1");
 let disco = document.createElement("div");
@@ -15,13 +15,10 @@ let tabuleiro = [
 ];
 //teste do Davis
 
-//let luigi = 
-
-
-
+//let luigi =
 
 function exibeTabuleiro() {
-  console.log(tabuleiro)
+  console.log(tabuleiro);
   for (let i = 0; i < tabuleiro.length; i++) {
     let coluna = document.createElement("div");
     coluna.classList.add("coluna");
@@ -92,10 +89,9 @@ function isEven(numero) {
 //funcção de clique na primeira coluna
 
 function colocarClicks() {
-
-
-
-  const coluna0 = document.getElementById("coluna0").onclick = function click() {
+  const coluna0 = (document.getElementById(
+    "coluna0"
+  ).onclick = function click() {
     console.log("clicou na 1");
     console.log(contador1);
     let celula = document.getElementById(contador1);
@@ -120,9 +116,11 @@ function colocarClicks() {
     contador1++;
 
     checaVitoria();
-  };
+  });
   //funcção de clique na segunda coluna
-  const coluna1 = document.getElementById("coluna1").onclick = function click() {
+  const coluna1 = (document.getElementById(
+    "coluna1"
+  ).onclick = function click() {
     console.log("clicou na 2");
     let celula = document.getElementById(contador2);
     let disco = document.createElement("div");
@@ -144,9 +142,11 @@ function colocarClicks() {
     contador2++;
 
     checaVitoria();
-  };
+  });
   //funcção de clique na terceira coluna
-  const coluna2 = document.getElementById("coluna2").onclick = function click() {
+  const coluna2 = (document.getElementById(
+    "coluna2"
+  ).onclick = function click() {
     console.log("clicou na 3");
     let celula = document.getElementById(contador3);
     let disco = document.createElement("div");
@@ -167,9 +167,11 @@ function colocarClicks() {
     contador3++;
 
     checaVitoria();
-  };
+  });
   //funcção de clique na quarta coluna
-  const coluna3 = document.getElementById("coluna3").onclick = function click() {
+  const coluna3 = (document.getElementById(
+    "coluna3"
+  ).onclick = function click() {
     console.log("clicou na 4");
     let celula = document.getElementById(contador4);
     let disco = document.createElement("div");
@@ -189,9 +191,11 @@ function colocarClicks() {
     contador4++;
 
     checaVitoria();
-  };
+  });
   //funcção de clique na quinta coluna
-  const coluna4 = document.getElementById("coluna4").onclick = function click() {
+  const coluna4 = (document.getElementById(
+    "coluna4"
+  ).onclick = function click() {
     console.log("clicou na 5");
     let celula = document.getElementById(contador5);
     let disco = document.createElement("div");
@@ -211,9 +215,11 @@ function colocarClicks() {
     contador5++;
 
     checaVitoria();
-  };
+  });
   //funcção de clique na sexta coluna
-  const coluna5 = document.getElementById("coluna5").onclick = function click() {
+  const coluna5 = (document.getElementById(
+    "coluna5"
+  ).onclick = function click() {
     console.log("clicou na 6");
     let celula = document.getElementById(contador6);
     let disco = document.createElement("div");
@@ -233,9 +239,11 @@ function colocarClicks() {
     contador6++;
 
     checaVitoria();
-  };
+  });
   //funcção de clique na setima coluna
-  const coluna6 = document.getElementById("coluna6").onclick = function click() {
+  const coluna6 = (document.getElementById(
+    "coluna6"
+  ).onclick = function click() {
     console.log("clicou na 7");
     let celula = document.getElementById(contador7);
     let disco = document.createElement("div");
@@ -255,10 +263,8 @@ function colocarClicks() {
     contador7++;
 
     checaVitoria();
-  };
-
+  });
 }
-
 
 let LimX = tabuleiro[0].length - 3;
 let LimY = tabuleiro.length - 3;
@@ -274,10 +280,10 @@ function checaVitoria() {
           cell === tabuleiro[y][x + 2] &&
           cell === tabuleiro[y][x + 3]
         ) {
-          let vitoria = document.createElement('div');
-          vitoria.id = "vitoria"
-          vitoria.innerHTML = `${cell} Venceu na Vertical`;
-          body.appendChild(vitoria)
+          let vitoria = document.createElement("div");
+          vitoria.id = "vitoria";
+          vitoria.innerHTML = `${cell} Venceu na VERTICAL`;
+          body.appendChild(vitoria);
           //alert(`${cell}` + " venceu na VERTICAL!");
           //return 0;
         }
@@ -296,10 +302,10 @@ function checaVitoria() {
           cell === tabuleiro[y + 2][x] &&
           cell === tabuleiro[y + 3][x]
         ) {
-          let vitoria = document.createElement('div');
-          vitoria.id = "vitoria"
-          vitoria.innerHTML = `${cell} Venceu na Horizontal`;
-          body.appendChild(vitoria)
+          let vitoria = document.createElement("div");
+          vitoria.id = "vitoria";
+          vitoria.innerHTML = `${cell} Venceu na HORIZONTAL`;
+          body.appendChild(vitoria);
           //alert(`${cell}` + " VENCEU na HORIZONTAL!");
           //return 0;
         }
@@ -318,10 +324,10 @@ function checaVitoria() {
           cell === tabuleiro[y + 2][x + 2] &&
           cell === tabuleiro[y + 3][x + 3]
         ) {
-          let vitoria = document.createElement('div');
-          vitoria.id = "vitoria"
-          vitoria.innerHTML = `${cell} Venceu na Ascendete`;
-          body.appendChild(vitoria)
+          let vitoria = document.createElement("div");
+          vitoria.id = "vitoria";
+          vitoria.innerHTML = `${cell} Venceu na DIAGONAL`;
+          body.appendChild(vitoria);
           //alert(`${cell}` + " venceu na ASCENDENTE!");
           //return 0;
         }
@@ -340,11 +346,11 @@ function checaVitoria() {
           cell === tabuleiro[y + 2][x - 2] &&
           cell === tabuleiro[y + 3][x - 3]
         ) {
-          let vitoria = document.createElement('div');
-          vitoria.id = "vitoria"
-          vitoria.innerHTML = `${cell} Venceu na Ascendete`;
-          let newELement = document.getElementById("vitoria");
-          body.appendChild(newELement)
+          let vitoria = document.createElement("div");
+          vitoria.id = "vitoria";
+          vitoria.innerHTML = `${cell} Venceu na DIAGONAL`;
+
+          body.appendChild(vitoria);
           //alert(`${cell}` + " venceu na ASCENDENTE!");
 
           //return 0;
@@ -354,10 +360,9 @@ function checaVitoria() {
   }
 }
 
-colocarClicks()
+colocarClicks();
 
 // Função de resetar o jogo
-
 
 function resetar() {
   let gameContent = document.getElementById("gameContent");
@@ -381,21 +386,11 @@ function resetar() {
   contador6 = 50;
   contador7 = 60;
   contadorGeral = 0;
-  exibeTabuleiro()
-  colocarClicks()
+  exibeTabuleiro();
+  colocarClicks();
   let vitoria = document.getElementById("vitoria");
-  vitoria.remove()
+  vitoria.remove();
 }
 
 let reset = document.getElementById("restart");
-reset.addEventListener("click", resetar)
-
-
-//coluna0.addEventListener("click", handlerClick)
-
-
-//function handlerClick() {
-//
-//  let coluna0 = document.getElementById("coluna"+´);
-//
-//}
+reset.addEventListener("click", resetar);
