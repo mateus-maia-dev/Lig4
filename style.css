@@ -196,6 +196,9 @@ p {
       font-size: 2em;
       color: #ffffff;
     }
+    #vitoria {
+      font-size: 30px;
+    }
   }
   @media (min-width: 1200px) {
     #body {
@@ -210,6 +213,9 @@ p {
     }
     p{
       max-width: 70%;
+    }
+    #vitoria {
+      font-size: 30px;
     }
   }
 }
