@@ -38,7 +38,8 @@ h1 {
 p {
 
   font-size: 1em;
-  color: #ffffff;
+  color: #000000;
+  
 }
 
 
@@ -52,6 +53,11 @@ p {
   flex-direction: row;
   box-sizing: border-box;
 
+}
+
+#mario, #luigi {
+  width: 40px;
+  height: 40px;
 }
 
 .disco {
@@ -83,6 +89,7 @@ p {
   border-radius: 4px;
   margin: 0 auto;
   margin-bottom: 15px;
+  
 
 }
 
@@ -173,8 +180,8 @@ p {
   #vitoria {
     width: 420px;
     height: 80px;
-    font-size: 30px;
-    border: 2px solid #ffffff
+    font-size: 34px;
+    border: 2px solid #ffffff;
   }
 
   @media (min-width: 900px) {
@@ -194,7 +201,7 @@ p {
     p {
       text-align: center;
       font-size: 2em;
-      color: #ffffff;
+      color: rgb(255, 255, 255);
     }
     #vitoria {
       font-size: 30px;
@@ -213,8 +220,10 @@ p {
     }
     p{
       max-width: 70%;
+      color: rgb(255, 255, 255);
     }
     #vitoria {
+      
       font-size: 30px;
     }
   }
