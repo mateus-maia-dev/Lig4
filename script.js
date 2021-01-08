@@ -85,10 +85,16 @@ function isEven(numero) {
 
 // gameContent.addEventListener("click", onClick);
 
+  let luigi = document.createElement("img");
+  luigi.id = "luigi"
+  luigi.src = "img/luigi2.png"
+
+
+  let mario = document.createElement("img");
+  mario.id = "mario"
+  mario.src = "img/Mario.png"
+
 //funcção de clique na primeira coluna
-
-colocarClicks();
-
 function colocarClicks() {
   const coluna0 = (document.getElementById(
     "coluna0"
@@ -100,6 +106,7 @@ function colocarClicks() {
     celula.appendChild(disco);
 
     contadorGeral++;
+    
 
     if (isEven(contadorGeral)) {
       disco.style.backgroundColor = "red";
@@ -254,6 +261,7 @@ function colocarClicks() {
     checaVitoria();
   });
 }
+colocarClicks();
 
 let LimX = tabuleiro[0].length - 3;
 let LimY = tabuleiro.length - 3;
@@ -271,7 +279,7 @@ function checaVitoria() {
         ) {
           let vitoria = document.createElement("div");
           vitoria.id = "vitoria";
-          vitoria.innerHTML = `${cell} Venceu na VERTICAL`;
+          vitoria.innerHTML = `${cell.toUpperCase()} Venceu na vertical`;
           body.appendChild(vitoria);
 
           waitReset();
@@ -293,7 +301,7 @@ function checaVitoria() {
         ) {
           let vitoria = document.createElement("div");
           vitoria.id = "vitoria";
-          vitoria.innerHTML = `${cell} Venceu na HORIZONTAL`;
+          vitoria.innerHTML = `${cell.toUpperCase()} Venceu na horizontal`;
           body.appendChild(vitoria);
 
           waitReset();
@@ -315,7 +323,7 @@ function checaVitoria() {
         ) {
           let vitoria = document.createElement('div');
           vitoria.id = "vitoria"
-          vitoria.innerHTML = `${cell} Venceu na Diagonal`;
+          vitoria.innerHTML = `${cell.toUpperCase()} Venceu na Diagonal`;
           body.appendChild(vitoria)
 
           waitReset();
@@ -339,7 +347,7 @@ function checaVitoria() {
         ) {
           let vitoria = document.createElement('div');
           vitoria.id = "vitoria"
-          vitoria.innerHTML = `${cell} Venceu na Diagonal`;
+          vitoria.innerHTML = `${cell.toUpperCase()} Venceu na Diagonal`;
           // let newELement = document.getElementById("vitoria");
           body.appendChild(vitoria);
 
