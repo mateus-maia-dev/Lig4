@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
 
 #body {
-  background-image: url(img/MarioeLuigi.png);
+  background-image: url(img/edbbfa09356c4cbe1745e796f1805364.gif);
   background-repeat: no-repeat;
   background-position: center;
   box-sizing: border-box;
@@ -10,7 +10,6 @@
   max-width: 375px;
   width: 100%;
   margin: 0 auto;
-
 }
 
 h1,
@@ -21,10 +20,9 @@ p,
   width: 100%;
   justify-content: center;
   margin: 0 auto;
-  font-family: 'Righteous', cursive;
+  font-family: "Righteous", cursive;
   padding: 15px;
   /*color: rgba(180, 178, 168, );*/
-
 }
 
 h1 {
@@ -32,24 +30,22 @@ h1 {
   text-shadow: 2px 2px black;
   font-size: 1em;
   color: #ffffff;
-  font-family: 'Righteous', cursive;
-
+  font-family: "Righteous", cursive;
 }
-.comoJogar{
+.comoJogar {
   background-color: #00000080;
 }
 p {
   font-size: 1em;
   color: #ffffff;
 }
-h3{
+h3 {
   font-size: 2em;
   color: #ffffff;
-  font-family: 'Righteous', cursive;
+  font-family: "Righteous", cursive;
   text-align: center;
   padding: 15px;
 }
-
 
 #gameContent {
   display: flex;
@@ -60,7 +56,6 @@ h3{
   height: 100%;
   flex-direction: row;
   box-sizing: border-box;
-
 }
 
 .disco {
@@ -71,10 +66,24 @@ h3{
   position: relative;
   animation: mymove 1s;
 }
+
 @keyframes mymove {
-  from {top: -100px;}
-  to {top: 0px;}
+  0% {
+    transform: translateY(-100px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
+
+/* @keyframes mymove {
+  from {
+    top: -100px;
+  }
+  to {
+    top: 0px;
+  }
+} */
 
 .celula {
   border: 1px solid;
@@ -86,7 +95,7 @@ h3{
   display: flex;
   flex-direction: column-reverse;
 }
-.coluna:hover{
+.coluna:hover {
   background-color: cyan;
 }
 
@@ -94,13 +103,16 @@ h3{
   display: flex;
   align-items: center;
   width: 300px;
-  background: linear-gradient(90deg, rgba(249, 80, 0, 1) 17%, rgb(223, 218, 84) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(249, 80, 0, 1) 17%,
+    rgb(223, 218, 84) 100%
+  );
   color: #ffffff;
   font-size: 1.2em;
   border-radius: 4px;
   margin: 0 auto;
   margin-bottom: 15px;
-
 }
 
 #restart {
@@ -116,8 +128,8 @@ h3{
   border: 3px solid rgb(89, 88, 65);
   border-radius: 4px;
   color: #ffffff;
-  font-family: 'Righteous', cursive;
-  font-size: 1.4em
+  font-family: "Righteous", cursive;
+  font-size: 1.4em;
 }
 
 @media (min-width: 426px) {
@@ -125,7 +137,6 @@ h3{
     background-size: 170%;
     width: 100%;
     box-sizing: border-box;
-
   }
 
   .disco {
@@ -141,11 +152,10 @@ h3{
     height: 50px;
     background-color: rgba(255, 255, 255, 0.8);
   }
-  h3{
+  h3 {
     font-size: 3em;
     align-items: center;
   }
-
 }
 
 @media (min-width: 769px) {
@@ -168,13 +178,10 @@ h3{
     background-color: rgba(255, 255, 255, 0.8);
   }
 
-
-
   h1 {
     font-size: 80px;
     color: #ffffff;
     text-shadow: 4px 4px black;
-
   }
 
   p {
@@ -188,14 +195,13 @@ h3{
     width: 310px;
     height: 56px;
     font-size: 30px;
-
   }
 
   #vitoria {
     width: 420px;
     height: 80px;
     font-size: 30px;
-    border: 2px solid #ffffff
+    border: 2px solid #ffffff;
   }
 
   @media (min-width: 900px) {
@@ -211,7 +217,7 @@ h3{
       color: #ffffff;
       text-shadow: 2px 2px black;
     }
-    
+
     p {
       text-align: center;
       font-size: 2em;
@@ -232,7 +238,7 @@ h3{
     h1 {
       font-size: 5em;
     }
-    p{
+    p {
       max-width: 70%;
     }
     #vitoria {
