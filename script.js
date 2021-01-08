@@ -18,7 +18,6 @@ let tabuleiro = [
 //let luigi =
 
 function exibeTabuleiro() {
-  console.log(tabuleiro);
   for (let i = 0; i < tabuleiro.length; i++) {
     let coluna = document.createElement("div");
     coluna.classList.add("coluna");
@@ -94,11 +93,7 @@ function colocarClicks() {
   const coluna0 = (document.getElementById(
     "coluna0"
   ).onclick = function click() {
-    console.log("clicou na 1");
-    console.log(contador1);
     let celula = document.getElementById(contador1);
-
-    console.log(celula);
     let disco = document.createElement("div");
     let corDoDisco = "red";
     disco.classList.add("disco");
@@ -123,14 +118,12 @@ function colocarClicks() {
   const coluna1 = (document.getElementById(
     "coluna1"
   ).onclick = function click() {
-    console.log("clicou na 2");
     let celula = document.getElementById(contador2);
     let disco = document.createElement("div");
     disco.classList.add("disco");
     celula.appendChild(disco);
 
     contadorGeral++;
-    console.log(Math.floor(contador2 % 10));
 
     if (isEven(contadorGeral)) {
       disco.style.backgroundColor = "red";
@@ -149,14 +142,12 @@ function colocarClicks() {
   const coluna2 = (document.getElementById(
     "coluna2"
   ).onclick = function click() {
-    console.log("clicou na 3");
     let celula = document.getElementById(contador3);
     let disco = document.createElement("div");
     disco.classList.add("disco");
     celula.appendChild(disco);
 
     contadorGeral++;
-    console.log(Math.floor(contador3 / 10));
 
     if (isEven(contadorGeral)) {
       disco.style.backgroundColor = "red";
@@ -174,7 +165,6 @@ function colocarClicks() {
   const coluna3 = (document.getElementById(
     "coluna3"
   ).onclick = function click() {
-    console.log("clicou na 4");
     let celula = document.getElementById(contador4);
     let disco = document.createElement("div");
     disco.classList.add("disco");
@@ -198,7 +188,6 @@ function colocarClicks() {
   const coluna4 = (document.getElementById(
     "coluna4"
   ).onclick = function click() {
-    console.log("clicou na 5");
     let celula = document.getElementById(contador5);
     let disco = document.createElement("div");
     disco.classList.add("disco");
@@ -222,7 +211,6 @@ function colocarClicks() {
   const coluna5 = (document.getElementById(
     "coluna5"
   ).onclick = function click() {
-    console.log("clicou na 6");
     let celula = document.getElementById(contador6);
     let disco = document.createElement("div");
     disco.classList.add("disco");
@@ -246,7 +234,6 @@ function colocarClicks() {
   const coluna6 = (document.getElementById(
     "coluna6"
   ).onclick = function click() {
-    console.log("clicou na 7");
     let celula = document.getElementById(contador7);
     let disco = document.createElement("div");
     disco.classList.add("disco");
