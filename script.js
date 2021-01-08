@@ -279,7 +279,7 @@ function checaVitoria() {
         ) {
           let vitoria = document.createElement("div");
           vitoria.id = "vitoria";
-          vitoria.innerHTML = `${cell} Venceu na VERTICAL`;
+          vitoria.innerHTML = `${cell.toUpperCase()} Venceu na vertical`;
           body.appendChild(vitoria);
 
           waitReset();
@@ -301,7 +301,7 @@ function checaVitoria() {
         ) {
           let vitoria = document.createElement("div");
           vitoria.id = "vitoria";
-          vitoria.innerHTML = `${cell} Venceu na HORIZONTAL`;
+          vitoria.innerHTML = `${cell.toUpperCase()} Venceu na horizontal`;
           body.appendChild(vitoria);
 
           waitReset();
@@ -323,7 +323,7 @@ function checaVitoria() {
         ) {
           let vitoria = document.createElement('div');
           vitoria.id = "vitoria"
-          vitoria.innerHTML = `${cell} Venceu na Diagonal`;
+          vitoria.innerHTML = `${cell.toUpperCase()} Venceu na Diagonal`;
           body.appendChild(vitoria)
 
           waitReset();
@@ -347,7 +347,7 @@ function checaVitoria() {
         ) {
           let vitoria = document.createElement('div');
           vitoria.id = "vitoria"
-          vitoria.innerHTML = `${cell} Venceu na Diagonal`;
+          vitoria.innerHTML = `${cell.toUpperCase()} Venceu na Diagonal`;
           // let newELement = document.getElementById("vitoria");
           body.appendChild(vitoria);
 

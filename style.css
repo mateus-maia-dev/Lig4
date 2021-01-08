@@ -3,49 +3,47 @@
 #body {
   background-image: url(img/edbbfa09356c4cbe1745e796f1805364.gif);
   background-repeat: no-repeat;
-  background-position: center;
-  box-sizing: border-box;
+  background-size: 220%;
   background-attachment: fixed;
-  background-color: #000000;
-  max-width: 375px;
+  box-sizing: border-box;
+  justify-content: center;
+  min-width: 300px;
   width: 100%;
   margin: 0 auto;
+  max-height: 100vh;
+  height: 100%;
 }
+
 
 h1,
 p,
 #vitoria {
-  display: flex;
   box-sizing: border-box;
   width: 100%;
-  justify-content: center;
   margin: 0 auto;
+  text-align: center;
   font-family: "Righteous", cursive;
-  padding: 15px;
-  /*color: rgba(180, 178, 168, );*/
+  padding: 5px;
 }
 
 h1 {
   color: #ffffff;
   text-shadow: 2px 2px black;
-  font-size: 1em;
+  font-size: 3em;
   color: #ffffff;
   font-family: "Righteous", cursive;
+  border: 0;
 }
-.comoJogar {
-  background-color: #00000080;
-}
+
 p {
-  font-size: 1em;
-  color: #000000;
-  
-}
-h3 {
-  font-size: 2em;
-  color: #ffffff;
-  font-family: "Righteous", cursive;
-  text-align: center;
-  padding: 15px;
+  font-size: 1.1em;
+  color: #fffbfb;
+  text-shadow: 2px 2px black;
+  box-sizing: border-box;
+  border: 0;
+  padding-bottom: 25px;
+  background-color: rgba(0, 0, 0, 0.5);
+
 }
 
 #gameContent {
@@ -59,7 +57,8 @@ h3 {
   box-sizing: border-box;
 }
 
-#mario, #luigi {
+#mario,
+#luigi {
   width: 40px;
   height: 40px;
 }
@@ -73,23 +72,7 @@ h3 {
   animation: mymove 1s;
 }
 
-@keyframes mymove {
-  0% {
-    transform: translateY(-100px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
 
-/* @keyframes mymove {
-  from {
-    top: -100px;
-  }
-  to {
-    top: 0px;
-  }
-} */
 
 .celula {
   border: 1px solid;
@@ -97,10 +80,12 @@ h3 {
   height: 40px;
   background-color: rgba(255, 255, 255, 0.8);
 }
+
 .coluna {
   display: flex;
   flex-direction: column-reverse;
 }
+
 .coluna:hover {
   background-color: cyan;
 }
@@ -108,14 +93,15 @@ h3 {
 #vitoria {
   display: flex;
   align-items: center;
-  width: 300px;
-  background: linear-gradient(
-    90deg,
-    rgba(249, 80, 0, 1) 17%,
-    rgb(223, 218, 84) 100%
-  );
+  width: 250px;
+  height: 50px;
+  background: rgb(17, 201, 255);
+  background: linear-gradient(90deg, rgb(113, 183, 204) 17%, rgba(1, 60, 85, 1) 100%);
   color: #ffffff;
+  text-shadow: 1px 1px rgb(82, 66, 66);
   font-size: 1.2em;
+  text-align: center;
+  border: 1px solid rgb(15, 47, 105);
   border-radius: 4px;
   margin: 0 auto;
   margin-bottom: 15px;
@@ -130,7 +116,7 @@ h3 {
   margin-bottom: 25px;
   width: 150px;
   height: 40px;
-  background-color: rgb(187, 134, 64);
+  background-color: rgb(211, 149, 149);
   border: 3px solid rgb(89, 88, 65);
   border-radius: 4px;
   color: #ffffff;
@@ -138,11 +124,10 @@ h3 {
   font-size: 1.4em;
 }
 
-@media (min-width: 426px) {
+@media (min-width: 414px) {
   #body {
-    background-size: 170%;
+    background-size: 200%;
     width: 100%;
-    box-sizing: border-box;
   }
 
   .disco {
@@ -154,60 +139,75 @@ h3 {
 
   .celula {
     border: 1px solid;
-    width: 50px;
-    height: 50px;
-    background-color: rgba(255, 255, 255, 0.8);
-  }
-  h3 {
-    font-size: 3em;
-    align-items: center;
-  }
-}
-
-@media (min-width: 769px) {
-  #body {
-    background-size: 120%;
-    max-width: 100%;
-  }
-
-  .disco {
-    background-color: black;
-    border-radius: 50%;
-    width: 80px;
-    height: 80px;
-  }
-
-  .celula {
-    border: 1px solid;
-    width: 80px;
-    height: 80px;
+    width: 55px;
+    height: 55px;
     background-color: rgba(255, 255, 255, 0.8);
   }
 
   h1 {
-    font-size: 80px;
+    font-size: 3em;
+    padding-top: 15px;
+  }
+
+  p {
+    font-size: 1.4em;
+  }
+
+  #vitoria {
+    display: flex;
+    width: 300px;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+}
+
+
+@media (min-width: 768px) {
+  #body {
+    background-size: 180%;
+    width: 100%;
+  }
+
+  .disco {
+    background-color: black;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+  }
+
+  .celula {
+    border: 1px solid;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+
+  h1 {
+    font-size: 100px;
     color: #ffffff;
     text-shadow: 4px 4px black;
+    padding-bottom: 15px;
   }
 
   p {
     text-align: center;
-    font-size: 1.4em;
+    font-size: 1.9em;
     color: #ffffff;
     padding: 20px 40px;
   }
 
   #restart {
     width: 310px;
-    height: 56px;
-    font-size: 30px;
+    height: 75px;
+    font-size: 45px;
   }
 
   #vitoria {
-    width: 420px;
-    height: 80px;
-    font-size: 30px;
-    border: 2px solid #ffffff;
+    width: 560px;
+    height: 110px;
+    font-size: 45px;
+    border: 3px solid #ffffff;
   }
 
   @media (min-width: 900px) {
@@ -229,10 +229,12 @@ h3 {
       font-size: 2em;
       color: rgb(255, 255, 255);
     }
+
     #vitoria {
       font-size: 30px;
     }
   }
+
   @media (min-width: 1200px) {
     #body {
       background-size: 70%;
@@ -241,16 +243,40 @@ h3 {
       width: 100%;
       max-height: 80vh;
     }
+
     h1 {
-      font-size: 5em;
+      font-size: 6em;
     }
+
     p {
-      max-width: 70%;
+      width: 70%;
       color: rgb(255, 255, 255);
     }
+
     #vitoria {
-      
+
       font-size: 30px;
     }
+  }
+}
+
+@keyframes mymove {
+  0% {
+    transform: translateY(-100px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes mymove {
+  from {
+    top: -100px;
+  }
+
+  to {
+    top: 0px;
   }
 }
