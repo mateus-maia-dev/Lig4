@@ -35,11 +35,19 @@ h1 {
   font-family: 'Righteous', cursive;
 
 }
-
+.comoJogar{
+  background-color: #00000080;
+}
 p {
-
   font-size: 1em;
   color: #ffffff;
+}
+h3{
+  font-size: 2em;
+  color: #ffffff;
+  font-family: 'Righteous', cursive;
+  text-align: center;
+  padding: 15px;
 }
 
 
@@ -60,6 +68,12 @@ p {
   border-radius: 50%;
   width: 40px;
   height: 40px;
+  position: relative;
+  animation: mymove 1s;
+}
+@keyframes mymove {
+  from {top: -100px;}
+  to {top: 0px;}
 }
 
 .celula {
@@ -68,18 +82,13 @@ p {
   height: 40px;
   background-color: rgba(255, 255, 255, 0.8);
 }
-.celula:hover{
-  background-color: cyan;
-}
-.celula::selection {
-  background-color: cyan;
-}
-
 .coluna {
   display: flex;
   flex-direction: column-reverse;
 }
-
+.coluna:hover{
+  background-color: cyan;
+}
 
 #vitoria {
   display: flex;
@@ -131,6 +140,10 @@ p {
     width: 50px;
     height: 50px;
     background-color: rgba(255, 255, 255, 0.8);
+  }
+  h3{
+    font-size: 3em;
+    align-items: center;
   }
 
 }

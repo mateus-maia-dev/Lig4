@@ -330,6 +330,8 @@ function checaVitoria() {
           vitoria.id = "vitoria"
           vitoria.innerHTML = `${cell} Venceu na Diagonal`;
           body.appendChild(vitoria)
+
+          waitReset();
           //alert(`${cell}` + " venceu na ASCENDENTE!");
           //return 0;
         }
@@ -353,6 +355,8 @@ function checaVitoria() {
           vitoria.innerHTML = `${cell} Venceu na Diagonal`;
           // let newELement = document.getElementById("vitoria");
           body.appendChild(vitoria);
+
+          waitReset();
           //alert(`${cell}` + " venceu na ASCENDENTE!");
 
           //return 0;
