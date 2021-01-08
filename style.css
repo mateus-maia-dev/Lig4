@@ -2,7 +2,6 @@
 
 #body {
   background-image: url(img/MarioeLuigi.png);
-  background-size: 160%;
   background-repeat: no-repeat;
   background-position: center;
   box-sizing: border-box;
@@ -29,16 +28,26 @@ p,
 }
 
 h1 {
-  font-size: 3em;
   color: #ffffff;
   text-shadow: 2px 2px black;
-
-}
-
-p {
-
   font-size: 1em;
   color: #ffffff;
+  font-family: 'Righteous', cursive;
+
+}
+.comoJogar{
+  background-color: #00000080;
+}
+p {
+  font-size: 1em;
+  color: #ffffff;
+}
+h3{
+  font-size: 2em;
+  color: #ffffff;
+  font-family: 'Righteous', cursive;
+  text-align: center;
+  padding: 15px;
 }
 
 
@@ -59,6 +68,12 @@ p {
   border-radius: 50%;
   width: 40px;
   height: 40px;
+  position: relative;
+  animation: mymove 1s;
+}
+@keyframes mymove {
+  from {top: -100px;}
+  to {top: 0px;}
 }
 
 .celula {
@@ -67,10 +82,12 @@ p {
   height: 40px;
   background-color: rgba(255, 255, 255, 0.8);
 }
-
 .coluna {
   display: flex;
   flex-direction: column-reverse;
+}
+.coluna:hover{
+  background-color: cyan;
 }
 
 #vitoria {
@@ -103,7 +120,7 @@ p {
   font-size: 1.4em
 }
 
-@media (min-width: 425px) {
+@media (min-width: 426px) {
   #body {
     background-size: 170%;
     width: 100%;
@@ -124,10 +141,14 @@ p {
     height: 50px;
     background-color: rgba(255, 255, 255, 0.8);
   }
+  h3{
+    font-size: 3em;
+    align-items: center;
+  }
 
 }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   #body {
     background-size: 120%;
     max-width: 100%;
