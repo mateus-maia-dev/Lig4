@@ -2,8 +2,10 @@
 
 #body {
   background-image: url(img/edbbfa09356c4cbe1745e796f1805364.gif);
+  object-fit: cover;
   background-repeat: no-repeat;
-  background-size: 220%;
+  background-size: 245%;
+  background-position: center;
   background-attachment: fixed;
   box-sizing: border-box;
   justify-content: center;
@@ -23,7 +25,7 @@ p,
   margin: 0 auto;
   text-align: center;
   font-family: "Righteous", cursive;
-  padding: 5px;
+  padding: 0 5px;
 }
 
 h1 {
@@ -36,31 +38,25 @@ h1 {
 }
 
 p {
-  font-size: 1.1em;
+  font-size: 1em;
   color: #fffbfb;
   text-shadow: 2px 2px black;
   box-sizing: border-box;
   border: 0;
-  padding-bottom: 25px;
+  padding-bottom: 5px;
   background-color: rgba(0, 0, 0, 0.5);
 
 }
 
 #gameContent {
   display: flex;
-  margin: 0 auto;
-  width: 100%;
+  width: 65%;
   justify-content: center;
+  margin: 0 auto;
   align-items: center;
   height: 100%;
   flex-direction: row;
-  box-sizing: border-box;
-}
-
-#mario,
-#luigi {
-  width: 40px;
-  height: 40px;
+  
 }
 
 .disco {
@@ -79,11 +75,13 @@ p {
   width: 40px;
   height: 40px;
   background-color: rgba(255, 255, 255, 0.8);
+
 }
 
 .coluna {
   display: flex;
   flex-direction: column-reverse;
+  box-shadow: 23px 23px 10px rgba(0, 0, 0, 0.5);
 }
 
 .coluna:hover {
@@ -117,7 +115,7 @@ p {
   width: 150px;
   height: 40px;
   background-color: rgb(211, 149, 149);
-  border: 3px solid rgb(89, 88, 65);
+  border: 3px solid rgb(255, 255, 255);
   border-radius: 4px;
   color: #ffffff;
   font-family: "Righteous", cursive;
@@ -126,31 +124,30 @@ p {
 
 @media (min-width: 414px) {
   #body {
-    background-size: 200%;
     width: 100%;
   }
 
   .disco {
     background-color: black;
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
   }
 
   .celula {
     border: 1px solid;
-    width: 55px;
-    height: 55px;
+    width: 45px;
+    height: 45px;
     background-color: rgba(255, 255, 255, 0.8);
   }
 
   h1 {
-    font-size: 3em;
+    font-size: 2.5em;
     padding-top: 15px;
   }
 
   p {
-    font-size: 1.4em;
+    font-size: 1em;
   }
 
   #vitoria {
@@ -164,27 +161,28 @@ p {
 
 
 @media (min-width: 768px) {
+
   #body {
-    background-size: 180%;
+    background-size: 190%;
     width: 100%;
   }
 
   .disco {
     background-color: black;
     border-radius: 50%;
-    width: 100px;
-    height: 100px;
+    width: 70px;
+    height: 70px;
   }
 
   .celula {
     border: 1px solid;
-    width: 100px;
-    height: 100px;
+    width: 70px;
+    height: 70px;
     background-color: rgba(255, 255, 255, 0.8);
   }
 
   h1 {
-    font-size: 100px;
+    font-size: 4em;
     color: #ffffff;
     text-shadow: 4px 4px black;
     padding-bottom: 15px;
@@ -192,52 +190,30 @@ p {
 
   p {
     text-align: center;
-    font-size: 1.9em;
+    font-size: 1.2em;
     color: #ffffff;
     padding: 20px 40px;
   }
-
+  
   #restart {
     width: 310px;
-    height: 75px;
-    font-size: 45px;
+    height: 60px;
+    font-size: 38px;
   }
 
   #vitoria {
     width: 560px;
-    height: 110px;
-    font-size: 45px;
+    height: 80px;
+    font-size: 40px;
     border: 3px solid #ffffff;
   }
+  /*@media (min-width: 900px){
 
-  @media (min-width: 900px) {
+  }*/
+
+  @media (min-width: 1020px) {
     #body {
-      background-size: 100%;
-      background-position: center;
-      background-attachment: fixed;
-      width: 100%;
-    }
-
-    h1 {
-      font-size: 4em;
-      color: #ffffff;
-      text-shadow: 2px 2px black;
-    }
-
-    p {
-      text-align: center;
-      font-size: 2em;
-      color: rgb(255, 255, 255);
-    }
-
-    #vitoria {
-      font-size: 30px;
-    }
-  }
-
-  @media (min-width: 1200px) {
-    #body {
-      background-size: 70%;
+      background-size: 140%;
       background-position: center;
       background-attachment: fixed;
       width: 100%;
@@ -245,18 +221,24 @@ p {
     }
 
     h1 {
-      font-size: 6em;
+      font-size: 4em;
     }
 
     p {
-      width: 70%;
+      width: 100%;
       color: rgb(255, 255, 255);
+      font-size: 1.4em;
     }
+  #restart {
+    font-size: 40px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  #vitoria {
+    font-size: 40px;
+    width: 620px;
+  }
 
-    #vitoria {
-
-      font-size: 30px;
-    }
   }
 }
 
