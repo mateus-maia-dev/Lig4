@@ -2,8 +2,10 @@
 
 #body {
   background-image: url(img/edbbfa09356c4cbe1745e796f1805364.gif);
+  object-fit: cover;
   background-repeat: no-repeat;
-  background-size: 220%;
+  background-size: 245%;
+  background-position: center;
   background-attachment: fixed;
   box-sizing: border-box;
   justify-content: center;
@@ -48,19 +50,13 @@ p {
 
 #gameContent {
   display: flex;
-  margin: 0 auto;
-  width: 100%;
+  width: 65%;
   justify-content: center;
+  margin: 0 auto;
   align-items: center;
   height: 100%;
   flex-direction: row;
-  box-sizing: border-box;
-}
-
-#mario,
-#luigi {
-  width: 40px;
-  height: 40px;
+  
 }
 
 .disco {
@@ -79,11 +75,13 @@ p {
   width: 40px;
   height: 40px;
   background-color: rgba(255, 255, 255, 0.8);
+
 }
 
 .coluna {
   display: flex;
   flex-direction: column-reverse;
+  box-shadow: 23px 23px 10px rgba(0, 0, 0, 0.5);
 }
 
 .coluna:hover {
@@ -117,7 +115,7 @@ p {
   width: 150px;
   height: 40px;
   background-color: rgb(211, 149, 149);
-  border: 3px solid rgb(89, 88, 65);
+  border: 3px solid rgb(255, 255, 255);
   border-radius: 4px;
   color: #ffffff;
   font-family: "Righteous", cursive;
@@ -126,7 +124,6 @@ p {
 
 @media (min-width: 414px) {
   #body {
-    background-size: 200%;
     width: 100%;
   }
 
@@ -166,7 +163,7 @@ p {
 @media (min-width: 768px) {
 
   #body {
-    background-size: 180%;
+    background-size: 190%;
     width: 100%;
   }
 
@@ -207,7 +204,7 @@ p {
   #vitoria {
     width: 560px;
     height: 80px;
-    font-size: 45px;
+    font-size: 40px;
     border: 3px solid #ffffff;
   }
   /*@media (min-width: 900px){
@@ -216,7 +213,7 @@ p {
 
   @media (min-width: 1020px) {
     #body {
-      background-size: 130%;
+      background-size: 140%;
       background-position: center;
       background-attachment: fixed;
       width: 100%;
